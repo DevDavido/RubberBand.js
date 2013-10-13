@@ -182,6 +182,14 @@
 			});
 
 		};
+                
+                // Remove function
+                this.remove = function() {
+                    $(window).off("scroll touchmove");
+                    $('body').finish();
+                    
+                    delete $me;
+                };
 		
 		// Runtime
 		this.init(cb);
